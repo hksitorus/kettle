@@ -73,12 +73,12 @@ RUN echo "[+] DOWNLOAD MAXMIND DB JAR AND MOVE IT TO ${KETTLE_HOME}/libext" && \
 
 # Get kafka-consumer plugins
 RUN echo "[+] DOWNLOAD KAFKA CONSUMER PLUGINS AND MOVE IT TO ${KETTLE_HOME}/plugins" && \
-    cd /tmp && curl -O https://github.com/RuckusWirelessIL/pentaho-kafka-consumer/releases/download/v1.7/pentaho-kafka-consumer-v1.7.zip && \
+    cd /tmp && curl -L -O https://github.com/RuckusWirelessIL/pentaho-kafka-consumer/releases/download/v1.7/pentaho-kafka-consumer-v1.7.zip && \
     unzip pentaho-kafka-consumer-v1.7.zip && mv pentaho-kafka-consumer $KETTLE_HOME/plugins
 
 # Get kafka-producer plugins
 RUN echo "[+] DOWNLOAD KAFKA PRODUCER PLUGINS AND MOVE IT TO ${KETTLE_HOME}/plugins" && \
-    cd /tmp && curl -O https://github.com/RuckusWirelessIL/pentaho-kafka-producer/releases/download/v1.9/pentaho-kafka-producer-v1.9.zip && \
+    cd /tmp && curl -L -O https://github.com/RuckusWirelessIL/pentaho-kafka-producer/releases/download/v1.9/pentaho-kafka-producer-v1.9.zip && \
     unzip pentaho-kafka-producer-v1.9.zip && mv pentaho-kafka-producer $KETTLE_HOME/plugins
 
 
